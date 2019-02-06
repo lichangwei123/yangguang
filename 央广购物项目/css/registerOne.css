@@ -1,0 +1,476 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+ul,ol,li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.clearfix:after{content:"";height:0;clear:both;display:block;overflow:hidden;visibility: hidden;}
+/***********************头部************************/
+body{
+	background:#fafafa;
+}
+.heade-wrap{
+	height:80px;
+	border-bottom: 2px solid #f5f5f5;
+	margin:5px auto 0 auto;
+	position: relative;
+	z-index: 100;
+	background: #fff;
+	width:99%;
+}
+.heade-wrap .public-head-layout{
+	width:1000px;
+	height:80px;
+	margin:0 auto;
+}
+.heade-wrap .public-head-layout .site-logo{
+	width:240px;
+	height:68px;
+	float: left;
+	margin-left: 10px;;
+}
+.heade-wrap .public-head-layout .site-logo img{
+	width:240px;
+	height:68px;
+	vertical-align: middle;
+}
+.heade-wrap .public-head-layout .nc-login{
+	float: right;
+	font-size: 14px;
+	color:#aaa;
+	line-height:24px;
+	height:24px;
+	margin-top: 50px;
+}
+/***************中间***************/
+.nc-register-bg{
+	background:#fafafa url(../img/register_bg.png) repeat 50% 50%;
+	width:100%;
+	height:680px;
+	/*overflow: hidden;*/
+}
+.nc-register-bg .nc-register-box{
+	background:rgba(0,0,0,0.15);
+	width:860px;
+	height:560px;
+	padding:10px;
+	margin:60px auto;
+}
+.nc-register-bg .nc-register-box .nc-register-layout{
+	background:#fff;
+    width:820px;
+    height:520px;
+    padding:19px;
+    border:1px solid #ccc;
+    /*overflow: hidden;*/
+}
+.nc-register-bg .nc-register-box .nc-register-layout .left{
+	width:600px;
+	height:520px;
+	float: left;
+}
+.nc-register-bg .nc-register-box .nc-register-layout .left .nc-register-mode{
+	width:580px;
+}
+.nc-register-bg .nc-register-box .nc-register-layout .left .tabs-content{
+	padding:50px 80px 0 100px;
+}
+.nc-register-bg .nc-register-box .nc-register-layout .left  .tabs-nav{
+	border-bottom: 1px solid #e6e6e6;
+}
+.nc-register-bg .nc-register-box .nc-register-layout .left  .tabs-nav a{
+	display: inline-block;
+	width:50%;
+	height:40px;
+	margin-bottom: -1px;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 16px;
+	color:#666;
+}
+
+.nc-register-bg .nc-register-box .nc-register-layout .left .tabs-content .nc-login-form .dl{
+	background:#fff;
+	width:339px;
+	height:52px;
+	margin-top: -1px;
+	border: 1px solid #E6E6E6;
+	position: relative;
+	z-index: 1;
+}
+.nc-login-form dl dt{
+	font-size: 14px;
+	line-height: 20px;
+	color:#666;
+	width:88px;
+	padding:16px 0 16px 20px;
+	float: left;
+}
+.nc-login-form dl dd{
+	height:28px;
+	float: left;
+	padding:12px 0;
+	position: relative;
+}
+.nc-login-form dl dd span{
+	display:none;
+    position: absolute;
+    left:150px;
+    top:10px;
+	background: rgba(230,0,18,0.3);
+	height:30px;
+	line-height: 22px;
+	font-size: 12px;
+	color:#222222;
+	line-height: 30px;
+}
+
+.nc-login-form dl dd span i{
+	display: inline-block;
+	width:15px;
+	height: 15px;
+	background:url(../img/img51.jpg) no-repeat;
+	border-radius: 50%;
+	vertical-align: middle;
+	margin-left: 17px;
+	margin-right: 6px;
+}
+.nc-login-form dl dd .text{
+	font-size: 14px;
+	line-height:28px;
+	width:290px;
+	height:28px;
+	color:rgb(119,119,119);
+	display: inline-block;
+	min-height: 20px;
+	vertical-align: top;
+	border:none;
+	outline:none;
+}
+.error{
+	opacity: 0;
+}
+/*********验证码*************/
+
+.nc-login-form .code-div{
+	width:100%;
+	height:54px;
+}
+.nc-login-form  .code-div dl{
+	float: left;
+	background:#fff;
+	height:52px;
+	border: 1px solid #e6e6e6;
+	position: relative;
+	z-index: 1;
+	border-top: none;
+	
+}
+.nc-login-form .code-div  dl dt{
+	float: left;
+	font-size: 14px;
+	line-height: 20px;
+	color:#666;
+	width:88px;
+	padding:16px 0 16px 20px;
+}
+.nc-login-form  .code-div dl dd{
+	float: left;
+	height:28px;
+	padding: 12px 0;
+}
+.nc-login-form  .code-div dl dd .w100{
+	width:168px;
+    border:none;
+	font-size: 14px;
+	color:rgb(119,119,119);
+	outline: none;
+	line-height: 28px;
+	
+}
+.nc-login-form .code-div  dl dd .error{
+	display: inline-block;
+	width:15px;
+	height:15px;
+	background:url(../img/img51.jpg) no-repeat;
+	border-radius: 50%;
+	vertical-align: middle;
+}
+.nc-login-form .code-div .sp{
+	float: left;
+	width:120px;
+	height:52px;
+	
+	border:1px solid #e6e6e6;
+	position: relative;
+	z-index: 1;
+	border-top: none;
+
+}
+.nc-login-form .code-div .sp:hover a{
+	display: block;
+}
+.nc-login-form   .sp .code{
+	font-size: 20px;
+	width:120px;
+	height:52px;
+	line-height: 52px;
+	text-align: center;
+	display: inline-block;
+}
+.nc-login-form .code-div .sp a{
+	display: none;
+	font-size: 14px;
+	line-height: 52px;
+	color:#fff;
+	background:rgba(0,0,0,0.5);
+	text-align: center;
+	width:120px;
+	height:52px;
+	position: absolute;
+	left: 0;
+	top:0;
+	z-index: 1;
+}
+
+.nc-login-form .clause-div{
+	font-size: 14px;
+	color:#666;
+	line-height: 30px;
+	width:400px;
+	height:30px;
+	margin-top:15px;
+	border:none ;
+	background:#fff;
+	z-index: 1;
+}
+
+.nc-login-form .clause-div .checkbox{
+	vertical-align: middle;
+	margin-right: 8px;
+	display: inline-block;
+}
+.nc-login-form .clause-div a{
+	color:#0066CC
+}
+
+.nc-login-form .submit-div{
+	margin-top:15px;
+}
+.nc-login-form .submit-div .submit{
+	outline: none;
+    font-size: 16px;
+    font-weight: 600;
+    color:#fff;
+    background:#FF500B;
+    width:398px;
+    height:42px;
+    border:1px solid #F15C18;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.right{
+	width:200px;
+	height:500px;
+	float: right;
+	padding:20px 0 0 19px;
+	border-left: 1px solid #e6e6e6;
+}
+
+.right h4{
+	font-size: 14px;
+	line-height: 20px;
+	height:20px;
+	margin-bottom: 20px;
+	color:#333;
+}
+ .right li{
+ 	color:#999;
+ 	line-height: 24px;
+ 	margin-bottom: 10px;
+ 	padding-left: 12px;
+ 	font-size: 14px;
+ }
+ .right li i{
+ 	display: inline-block;
+ 	width:24px;
+ 	height:24px;
+ 	margin-right: 8px;
+ 	background:url(../img/login_pic.png) no-repeat;
+ 	vertical-align: middle;
+ 	margin-right: 8px;
+ 	background-position: 0 -76px;
+ }
+ .shade{
+ 	position: fixed;
+ 	width:100%;
+ 	height:100%;
+ 	left:0;
+ 	top:0;
+ 	background: rgba(0,0,0,0.2);
+ 	z-index: 100;
+ 	display: none;
+ 	
+ }
+ .agreement{
+ 	position: fixed;
+ 	width:750px;
+ 	height:550px;
+ 	left: 50%;
+ 	margin-left: -375px;
+ 	background:#fff;
+ 	top:100px;
+ 	z-index: 101;
+ 	display: none;
+ 	overflow: hidden;
+ }
+ .agreement h3{
+ 	width:100%;
+ 	height:42px;
+ 	line-height: 42px;
+ 	font-size: 14px;
+ 	font-weight: 600;
+ 	color:rgb(51,51,51);
+ 	border-bottom: 1px solid rgb(238,238,238);	
+ 	box-sizing: border-box;
+ 	padding:0 20px;
+ }
+ .agreement h3 span{
+ 	float:left;
+ }
+ .agreement h3 a{
+ 	float: right;
+ 	width:16px;
+ 	height:16px;
+ 	margin-left: 10px;
+ 	font-size: 12px;
+ 	display: inline-block;
+ 	background:url(../img/icon.png) no-repeat;
+ 	background-position: 0 -40px;
+ 	vertical-align: middle;
+ 	margin-top: 12px;
+ }
+ .agreement p{
+ 	font-size: 12px;
+ 	color:rgb(102,102,102);
+ 	box-sizing: border-box;
+ 	padding:35px 20px;
+ 	
+ }
+
+ .nc-login-form .clause-div1 dd{
+ 	float: left;
+ 	font-size: 14px;
+ 	color:#666;
+ 	line-height: 26px;
+ 	width:400px;
+ 	height:26px;
+ 	margin-top:15px;
+
+ }
+ .nc-login-form .m-t-10{
+ 	background:#fff;
+ 	width:398px;
+ 	height:52px;
+ 	border:1px solid #E6E6E6;
+
+
+ 	z-index: 1;
+ }
+ 
+#mobileFormSecond   .sp:hover a{
+	display: block;
+}
+#mobileFormSecond   .sp img{
+	width:120px;
+	height:52px;
+	vertical-align: middle;
+}
+#mobileFormSecond   .sp a{
+	display: none;
+	font-size: 14px;
+	line-height: 52px;
+	color:#fff;
+	background:rgba(0,0,0,0.5);
+	text-align: center;
+	width:120px;
+	height:52px;
+	position: absolute;
+	left: 0;
+	top:0;
+	z-index: 1;
+}
+.nc-login-form .tiptext{
+	line-height:20px;
+	color:#999;
+	padding:15px 0;
+}
+.nc-login-form .tiptext a{
+	line-height: 22px;
+	color:#fff;
+	background:#21B384;
+	vertical-align: middle;
+	display: inline-block;
+	height:22px;
+	padding:0 8px;
+	margin:0 4px;
+	border-radius: 2px;
+	font-size: 12px;
+}
+.mobileSubmitSecond .submit-div{
+	margin-top: 15px;
+}
+.mobileSubmitSecond .submit{
+	font-size: 16px;
+	font-weight: 600;
+	color:#fff;
+	background:#FF500B;
+	width:398px;
+	height:42px;
+	border:1px solid #F15C18;
+	border-radius: 3px;
+	outline: none;
+	cursor: pointer;
+	margin-top: 15px;
+}
+.f1{
+	display: none;
+}
+/********************底部*************************/
+.footer{
+	height:182px;
+	background:#343a3a;
+}
+.footer p{
+	text-align: center;
+}
+.footer p a{
+	font-size: 12px;
+	color:#eee;
+}
+.footer p  span{
+	font-size: 12px;
+	color:#eee;
+	padding:0 13px;
+}
+.footer p:nth-child(1){
+	padding-top: 16px;
+	padding-bottom: 12px;
+}
+.footer p:nth-child(2) img{
+	
+	vertical-align: middle;
+}
+.footer p:nth-child(3){
+	padding-top: 12px;
+}
+.footer p:last-child img{
+	margin: 20px 10px 0;
+	vertical-align: middle;	
+}

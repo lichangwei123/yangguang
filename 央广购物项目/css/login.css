@@ -1,0 +1,478 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+ul,ol,li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.clearfix:after{content:"";height:0;clear:both;display:block;overflow:hidden;visibility: hidden;}
+/********************头部**********************/
+body{
+	background:#fafafa;
+}
+.heade-wrap{
+	height:80px;
+	border-bottom: 2px solid #f5f5f5;
+	margin:5px auto 0 auto;
+	position: relative;
+	z-index: 100;
+	background: #fff;
+	width:99%;
+}
+.heade-wrap .public-head-layout{
+	width:1000px;
+	height:80px;
+	margin:0 auto;
+}
+.heade-wrap .public-head-layout .site-logo{
+	width:240px;
+	height:68px;
+	float: left;
+	margin-left: 10px;;
+}
+.heade-wrap .public-head-layout .site-logo img{
+	width:240px;
+	height:68px;
+	vertical-align: middle;
+}
+.public-head-layout .nc-register{
+	font-size: 14px;
+	color:#aaa;
+	line-height: 20px;
+	float: right;
+	height:40px;
+	margin-top:30px;
+}
+.public-head-layout .nc-register .avater{
+	display: inline-block;
+	width:40px;
+	height:40px;
+	margin-right: 6px;
+	border-radius: 100%;
+	vertical-align: top;
+}
+.public-head-layout .nc-register .avater img{
+	width:40px;
+	height:40px;
+	border-radius: 50%;
+	vertical-align: middle;
+}
+.public-head-layout .nc-register .register{
+	display: inline-block;
+	vertical-align: top;
+}
+.public-head-layout .nc-register .register a{
+	color:#06c;
+	font-weight: 600;
+	margin-left: 4px;
+}
+/********************中间部分**********************/
+.nc-login-layout{
+	width:1000px;
+	margin:20px auto;
+	position: relative;
+	z-index: 1;
+
+	min-height: 600px;
+}
+.nc-login-layout .left-pic{
+	width:450px;
+	height:350px;
+	float:left;
+	margin:30px 0;
+	position: relative;
+	z-index: 1;
+}
+.nc-login-layout .left-pic img{
+	max-width: 450px;
+	max-height: 450px;
+	position: absolute;
+	z-index: 1;
+	top:0;
+	left: 0;
+	vertical-align: middle;
+}
+.nc-login{
+	background: #fff;
+	width:440px;
+	padding:19px 19px 29px 19px;
+	border:1px solid #e6e6e6;
+	border-radius: 5px;
+	float: right;
+	position: relative;
+	z-index: 1;
+}
+.nc-login .arrow{
+	background:url(../img/login_pic.png) no-repeat -280px 0;
+	width:17px;
+	height:9px;
+	position: absolute;
+	z-index: 1;
+	top:-9px;
+	left: 160px;
+}
+.nc-login .tabs-nav{
+	border-bottom: 1px solid #e6e6e6;
+}
+.nc-login .tabs-nav li{
+	float:left;
+	vertical-align: bottom;
+	text-align: center;
+	display: inline-block;
+	width:50%;
+	height:40px;
+	margin-bottom: -1px;
+	border-bottom: 3px solid transparent;
+}
+.nc-login .tabs-nav .active{
+	border-bottom: 3px solid #FF500B;	
+}
+.nc-login .tabs-nav .active a{
+	color:#222222
+}
+.nc-login .tabs-nav .active i{
+	display: block;
+}
+.nc-login .tabs-nav li a{
+	font-size: 18px;
+	color:rgb(153,153,153);
+	line-height: 24px;
+	padding-bottom: 13px;
+	position: relative;
+	z-index: 1;
+	font-family: "微软雅黑";
+}
+.nc-login .tabs-nav li a:hover{
+	color:#222222;
+}
+
+.nc-login .tabs-nav li i{
+	border:7px solid transparent;
+	border-top-color: #ff500b;
+	width:0;
+	height:0;
+	margin-left: -4px;
+	position: absolute;
+	z-index: 1;
+	left: 50%;
+	bottom: -19px;
+	display: none;
+}
+
+.nc-login .tabs-container{
+	position: relative;
+	margin-top: 30px;
+	padding-left: 40px;
+	}
+/*************用户登录***************/
+.hideleft{
+
+	width:352px;
+
+    display: none;
+}
+.nc-login .tabs-container .error-msg{
+	line-height: 24px;
+	padding: 8px 20px 8px 20px;
+	background:#fff5d9;
+	display: none;
+}
+.nc-login .tabs-container .error-msg p i{
+	display: inline-block;
+	width:15px;
+	height:15px;
+	background:url(../img/img51.jpg) no-repeat;
+	vertical-align: middle;
+	margin-right: 10px;
+	border-radius: 50%;
+	
+}
+.nc-login .tabs-container .hideleft .login-form p{
+	padding:14px 0 14px 20px;
+    border:1px solid #E6E6E6;
+    background:#fff;
+}
+.nc-login .tabs-container .hideleft .login-form p span{
+	font-size: 14px;
+	color:rgb(119,119,119);
+	
+}
+.nc-login .tabs-container .hideleft .login-form .valid{
+	width:217px;
+	display: inline-block;
+	line-height: 28px;
+	height:28px;
+	color:rgb(119,119,119);
+	background:#fff;
+	min-height: 20px;
+	padding-left: 40px;
+	border:none;
+	outline:none;
+}
+/*验证码*/
+
+.nc-login-layout .nc-login-mode .shower{
+	display: block;
+}
+.nc-login .tabs-container .code-div{
+	width:100%;
+	height:54px;
+}
+.nc-login .tabs-container   dl{
+	float: left;
+	background:#fff;
+	height:52px;
+	border: 1px solid #e6e6e6;
+	position: relative;
+	z-index: 1;
+	border-top: none;
+}
+.nc-login .tabs-container   dl dt{
+	float: left;
+	font-size: 14px;
+	line-height: 20px;
+	color:#666;
+	width:88px;
+	padding:16px 0 16px 20px;
+}
+.nc-login .tabs-container   dl dd{
+	float: left;
+	height:28px;
+	padding: 12px 0;
+}
+.nc-login .tabs-container   dl dd .w100{
+	width:100px;
+    border:none;
+	font-size: 14px;
+	color:rgb(119,119,119);
+	outline: none;
+	line-height: 28px;
+	
+}
+.nc-login .tabs-container   dl dd .error{
+	display: inline-block;
+	width:15px;
+	height:15px;
+	background:url(../img/img51.jpg) no-repeat;
+	border-radius: 50%;
+	vertical-align: middle;
+	opacity:0;
+}
+.nc-login .tabs-container   .sp{
+	float: left;
+	width:120px;
+	height:52px;
+	border:1px solid #e6e6e6;
+	position: relative;
+	z-index: 1;
+	border-top: none;
+
+}
+.nc-login .tabs-container   .sp:hover a{
+	display: block;
+}
+.nc-login .tabs-container   .sp img{
+	width:120px;
+	height:52px;
+	vertical-align: middle;
+}
+.nc-login .tabs-container   .sp a{
+	display: none;
+	font-size: 14px;
+	line-height: 52px;
+	color:#fff;
+	background:rgba(0,0,0,0.5);
+	text-align: center;
+	width:120px;
+	height:52px;
+	position: absolute;
+	left: 0;
+	top:0;
+	z-index: 1;
+}
+
+
+.nc-login .tabs-container .hideleft .login-form .handle-div{
+	line-height: 20px;
+	margin-top:15px;
+	overflow: hidden;
+}
+.nc-login .tabs-container .hideleft .login-form .handle-div .auto{
+	color:#999;
+	float: left;
+	font-size: 14px;
+	
+}
+.nc-login .tabs-container .hideleft .login-form .handle-div .auto .checkbox{
+	display: inline-block;
+	margin-right: 4px;
+	vertical-align: middle;
+}
+.nc-login .tabs-container .hideleft .login-form .handle-div .auto em{
+	line-height: 20px;
+	color:#ff3238;
+	vertical-align: top;
+	margin-left: 6px;
+	display: inline-block;
+	font-style: normal;
+	display: none;
+}
+.nc-login .tabs-container .hideleft .login-form .handle-div .forget{
+	float: right;
+    text-align: right;
+    font-size: 14px;
+}
+.nc-login .tabs-container .hideleft .login-form .submit-div{
+	margin-top: 15px;
+	
+}
+.nc-login .tabs-container .hideleft .login-form .submit-div .submit{
+	width: 352px;
+	font-size: 16px;
+	font-weight: 600;
+	color:#fff;
+	background:#FF500B;
+	height:42px;
+	border:1px solid #F15C18;
+	cursor: pointer;
+}
+
+/**************手机动态码登录**************/
+.tabs-container .showleft{
+	width:352px;
+    display: none;
+}
+.tabs-container .showleft p{
+	padding:14px 0 14px 20px;
+    border:1px solid #E6E6E6;
+    background:#fff;
+}
+.tabs-container .showleft p span{
+		font-size: 14px;
+	color:rgb(119,119,119);
+
+}
+.tabs-container .showleft p .txt{
+	width:217px;
+	display: inline-block;
+	line-height: 28px;
+	height:28px;
+	color:rgb(119,119,119);
+	background:#fff;
+	min-height: 20px;
+	padding-left: 40px;
+	border:none;
+	outline:none;
+}
+.tabs-container .showleft p .txt1{
+	width:217px;
+	display: inline-block;
+	line-height: 28px;
+	height:28px;
+	color:rgb(119,119,119);
+	background:#fff;
+	min-height: 20px;
+	padding-left: 40px;
+	border:none;
+	outline:none;
+}
+
+
+.tabs-container .showleft .tiptext{
+	line-height: 20px;
+	color:#999;
+	margin:15px 0;
+	font-size: 14px;
+}
+.tabs-container .showleft .tiptext a{
+	line-height: 22px;
+	display: inline-block;
+	height:22px;
+	background:#21b384;
+	vertical-align: middle;
+	padding:0 8px;
+	margin:0 4px;
+	border-radius: 2px;
+	font-size: 14px;
+	color:#fff;
+}
+.tabs-container .showleft .tiptext a img{
+	vertical-align: middle;
+}
+.nc-login .tabs-container .showleft .submit-div{
+	margin-top: 15px;
+	
+}
+.nc-login .tabs-container .showleft .submit-div .submit{
+	width: 352px;
+	font-size: 16px;
+	font-weight: 600;
+	color:#fff;
+	background:#FF500B;
+	height:42px;
+	border:1px solid #F15C18;
+	cursor: pointer;
+}
+
+/**************公用底部******************/
+.nc-login-api{
+	width:340px;
+	margin:10px auto 0;
+}
+.nc-login-api h4{
+	font-size: 14px;
+	color:#666;
+}
+.nc-login-api a{
+	font-size: 12px;
+	color:#aaa;
+	vertical-align: top;
+	display: inline-block;
+	height:32px;
+	margin-right: 24px;
+}
+.nc-login-api a i{
+	display: inline-block;
+	width:32px;
+	height:32px;
+	background:url(../img/login_pic.png) no-repeat;
+	margin-right: 6px;
+	background-position: -64px 0;
+	vertical-align: middle;
+}
+/********************底部*************************/
+.footer{
+	height:182px;
+	background:#343a3a;
+}
+.footer p{
+	text-align: center;
+}
+.footer p a{
+	font-size: 12px;
+	color:#eee;
+}
+.footer p  span{
+	font-size: 12px;
+	color:#eee;
+	padding:0 13px;
+}
+.footer p:nth-child(1){
+	padding-top: 16px;
+	padding-bottom: 12px;
+}
+.footer p:nth-child(2) img{
+	
+	vertical-align: middle;
+}
+.footer p:nth-child(3){
+	padding-top: 12px;
+}
+.footer p:last-child img{
+	margin: 20px 10px 0;
+	vertical-align: middle;	
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/login.css"/>
+	</head>
+	<body>
+	<!---------*****************header******************---------->
+	<div class="heade-wrap">
+		<div class="public-head-layout">
+			<h1 class="site-logo">
+				<a href="#">
+					<img src="../img/logo.png" alt="">
+				</a>
+			</h1>
+			<div class="nc-register">
+				<span class="avater">
+					<img src="../img/img50.jpg" alt="">
+				</span>
+				<span class="register">
+					您好，欢迎来到央广购物
+					<br />
+					已注册的会员请登录，或立即
+					<a href="registerOne.html">注册新会员</a>
+				</span>
+			</div>
+		</div>
+	</div>
+	<!-------------**************中间部分*****************--------->
+	<div class="nc-login-layout">
+		<div class="left-pic">
+			<img src="../img/login_img.jpg" alt="">
+		</div>
+		<div class="nc-login clearfix">
+			<div class="arrow">
+				
+			</div>
+			<div class="nc-login-mode">
+				<ul class="tabs-nav clearfix">
+					<li class="active">
+						<a href="#">用户登录<i></i></a>
+						
+					</li>
+					<li>
+						<a href="#">手机动态码登录<i></i></a>
+					</li>
+					<span class="tabclear"></span>
+				</ul>
+				<div class="tabs-container clearfix" >
+   <!-----------------******用户登录*********------------------>
+					<div class="hideleft shower a">
+						<div class="error-msg">
+							<p>
+								<i></i>
+								<span></span>
+							</p>
+						</div>
+						<form class="login-form" method="post" novalidate="" id="login">							
+								<p><span>账&nbsp;&nbsp;&nbsp;号 :</span>								
+									<input type="text" class="valid" id="loginName" autocomplete="off" placeholder="手机号/会员名/邮箱" /></p>
+								<p style="border-top: none;"><span>密&nbsp;&nbsp;&nbsp;码 :</span>								
+									<input type="password" class="valid" id="loginPwd" autocomplete="off" placeholder="输入账户密码" /></p>
+						        <div class="code-div">
+						        	<dl class="clearfix">
+						        		<dt>验证码 :</dt>
+						        		<dd>
+						        			<input type="text" class="w100" maxlength="4" placeholder=" 输入验证码" autocomplete="off" />
+						        			<label for="captcha" class="error" title="验证码不能为空"></label>
+						        		</dd>
+						        	</dl>
+						        	<span class="sp">
+						        		<img id="codeimage" src="https://www.cnrmall.com/captcha/getcaptcha?t=0.8915942816138358" class="codeimg" alt="" />
+						        		<a href="JavaScript:void(0);" nc_type="changeCaptcha" onclick="javascript:document.getElementById('codeimage').src='https://www.cnrmall.com/captcha/getcaptcha?t='+Math.random()" class="code-pic">看不清,换一张</a>
+						        	</span>
+						        </div>
+						        
+						        <div class="handle-div">
+						        	<span class="auto">
+						        	  <input type="checkbox" class="checkbox" id="autologin" /> 七天自动登录
+						        	  <em id="no">请勿在公用电脑上使用</em>
+						        	  
+						        	 </span>
+						        	 <a href="#" class="forget">忘记密码</a>
+						        </div>
+						        <div class="submit-div">
+<!--						        	<button class="submit" id="loginSubmit">登录</button>
+-->						        	<input type="button" class="submit" id="loginSubmit"  value="登录"/>
+						        </div>
+						</form>
+					</div>
+		<!---------**********手机动态码登录*********------------>
+					<div class="showleft a">
+						<form id="mobileForm" class="nc-login-form" method="post" novalidate="novalidate">
+						<p>
+							<span>手机号 :</span>
+							<input type="text" class="txt" id="mobile" placeholder="可填写已注册的手机号接收短信" autocomplete="off" />
+						</p>	
+							  <div class="code-div">
+						        	<dl class="clearfix">
+						        		<dt>验证码 :</dt>
+						        		<dd>
+						        			<input type="text" class="w100" maxlength="4" placeholder=" 输入验证码" autocomplete="off" />
+						        			<label for="captcha" class="error" title="验证码不能为空"></label>
+						        		</dd>
+						        	</dl>
+						        	<span class="sp">
+						        		<img id="codeimageMobile" src="https://www.cnrmall.com/captcha/getcaptcha?t=0.9684641300414645" class="codeimg" alt="" />
+						        		<a href="JavaScript:void(0);" nc_type="changeCaptcha" onclick="javascript:document.getElementById('codeimageMobile').src='https://www.cnrmall.com/captcha/getcaptcha?t='+Math.random()" class="code-pic">看不清,换一张</a>
+						        	</span>
+						        </div>
+                            <div class="tiptext">
+                            	 正确输入上方验证码后，点击
+                            	 <a href="#" class="fa">
+                            	 	<img src="../img/img52.jpg">  发送短信动态码
+                            	 	
+                            	 </a>
+                            	 ，查收短信将系统发送的“6位短信动态码”输入到下方验证后登录。 
+                            </div>
+                        <p>
+							<span>动态码 :</span>
+							<input type="text" class="txt1" id="authCode" placeholder="输入6位手机动态码" autocomplete="off" maxlength="6"/>
+						</p>	
+                        <div class="submit-div">
+                        	<button class="submit" id="mobileSubmit">登录</button>
+                        </div>
+						</form>
+					</div>
+				</div>
+			</div>
+	    <!---------**********公用底部*************-------->
+			<div class="nc-login-api">
+				<h4>使用合作网站账户登录</h4>
+				<a href="#">
+					<i></i>
+					微信
+				</a>
+			</div>
+		</div>
+	</div>
+	<!------********************底部**********************-------->	
+	<div class="footer">
+      	 <p>
+      	 	<a href="#">首页</a><span>|</span>
+      	 	<a href="#">招商合作</a><span>|</span>
+      	 	<a href="#">关于央广购物</a><span>|</span>
+      	 	<a href="#">联系我们</a><span>|</span>
+      	 	<a href="#">成为供应商</a><span>|</span>
+      	 	<a href="#">招贤纳士</a>
+      	 </p>
+      	 <p><img src="../img/img46_03.jpg" alt=""><a href="#">京公网安备：11011502002190</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">京ICP备10038858号</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">食品流通许可证编号：SP1101151210063489</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">信息网络传播视听节目许可证 0102002号</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">营业执照</a></p>
+      	 <p><a href="#">Copyright©2010-2017 cnrmall.com All Rights Reserved</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">服务热线：4008-518-518</a></p>
+      	 <p><img src="../img/img47_03.jpg"><img src="../img/img48_03.jpg"><img src="../img/img49_03.jpg"><img src="../img/img47_03.jpg"></p>
+      </div>
+
+	</body>
+</html>
+<script src="../js/jquery-1.11.3.js"></script>
+<script src="../js/sport6.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/cookie.js"></script>
+<script src="../js/login.js"></script>
