@@ -23,7 +23,8 @@ window.onload = function() {
                     	<div class="spu-singles">
                     		<div class="sku-quantity" data-id="${shopinfo.id}" data-price="${shopinfo.price}" data-count="${shopinfo.count}">
                     			<i class="jian">-</i>
-                    			<i class="buyNum">${shopinfo.count}</i>
+
+                    			<input type="text" value="${shopinfo.count}" class="buyNum">
                     			<i class="jia">+</i>
                     		</div>
                     		<div class="price-thin clearfix">
@@ -58,7 +59,7 @@ window.onload = function() {
 		var count = 0;
 		var money = 0;
 		$(".J-sup-checkbox:checked").each(function() {
-			count += parseInt($(this).parent().parent().find(".buyNum").html());
+			count += parseInt($(this).parent().parent().find(".buyNum").val());
 			console.log(count)
 			money += parseInt($(this).parent().parent().find(".integer").html());
 			$(".quantity-total").html(count);
@@ -73,7 +74,7 @@ window.onload = function() {
 	//加减操作
 	$(".jian").click(function() {
 		var pid = $(this).parent().data("id");
-		var count = $(this).parent().find(".buyNum").html();
+		var count = $(this).parent().find(".buyNum").val();
 		if(count == 1) {
 			return;
 		}
@@ -81,7 +82,7 @@ window.onload = function() {
 			if(pid == arr[i].id) {
 				arr[i].count--;
 				setCookie("shoplist", JSON.stringify(arr));
-				$(this).parent().find(".buyNum").html(arr[i].count);
+				$(this).parent().find(".buyNum").val(arr[i].count);
 				$(this).parent().parent().find(".integer").html((arr[i].count * arr[i].price).toFixed(2));
 				jiesuan();
 				break;
@@ -91,12 +92,12 @@ window.onload = function() {
 
 	$(".jia").click(function() {
 		var pid = $(this).parent().data("id");
-		var count = $(this).parent().find(".buyNum").html();
+		var count = $(this).parent().find(".buyNum").val();
 		for(var i = 0; i < arr.length; i++) {
 			if(pid == arr[i].id) {
 				arr[i].count++;
 				setCookie("shoplist", JSON.stringify(arr));
-				$(this).parent().find(".buyNum").html(arr[i].count);
+				$(this).parent().find(".buyNum").val(arr[i].count);
 				$(this).parent().parent().find(".integer").html((arr[i].count * arr[i].price).toFixed(2));
 				jiesuan();
 				break;
@@ -134,4 +135,35 @@ window.onload = function() {
 			})
 		}
 	})
+	
+	//  失焦
+		$(".buyNum").each(function(index,item){
+						$(this).blur(function(){
+
+							//获取当前操作的商品ID
+							let pid = $(this).parents('.sku-quantity').data("id");
+				for(var i = 0; i < arr.length; i++) {
+					if(pid == arr[i].id) {
+							
+							//修改cookie
+							if(/^\d+$/.test($(this).val()) && $(this).val() > 0){
+								arr[i].count = $(this).val();
+							}else{
+								arr[i].count = 1;
+							}
+							$(this).val(arr[i].count);
+								$(this).parent().parent().find(".integer").html((arr[i].count * arr[i].price).toFixed(2));
+								}	
+						}	
+					
+							//重新写入cookie
+						setCookie("shoplist", JSON.stringify(arr));							
+							//数量框
+							
+							//小计
+							jiesuan()
+					
+						})
+					})
+		
 }

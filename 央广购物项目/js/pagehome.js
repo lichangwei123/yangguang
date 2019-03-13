@@ -258,7 +258,7 @@ $(".side-ul li").click(function(){
  	var sTop=$(document).scrollTop();
  	var $floor=$(".floor").filter(function(){
  		//console.log($(this).offset().top , sTop , $(this).height()+$(this).offset().top)
- 		if(/*$(this).offset().top<=sTop && sTop<$(this).height()+$(this).offset().top*/
+ 		if(/*$(this).offset().top<=sTop && sTop<q$(this).height()+$(this).offset().top*/
  		Math.abs($(this).offset().top-sTop)<$(this).height()/2	){
  			// 			console.log($(this).index())
  			var str = $(this).find('h2').html();

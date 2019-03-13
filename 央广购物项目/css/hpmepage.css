@@ -10,6 +10,7 @@ ul,ol,li{
 a{
 	text-decoration: none;
 }
+
 .clearfix:after{content:"";height:0;clear:both;display:block;overflow:hidden;visibility: hidden;}
 /*top*/
 .top{
@@ -391,7 +392,9 @@ overflow: hidden;
 	color:#343a3a;
 }
 .public-nav .public-nav-center .all-category .menu li em{
-	color:#666;
+	color:#CCCCCC;
+	font-style: normal;
+	font-size: 14px;
 }
 
 .public-nav .public-nav-center .all-category .menu li .deshed{
@@ -476,6 +479,10 @@ overflow: hidden;
 	font-size: 12px;
 	color:#7c7171;
 	padding:0 4px;
+}
+.public-nav .public-nav-center .all-category .menu li .sub-class .sub-class-left dl dd span{
+	font-size: 12px;
+	color:#7c7171;
 }
 .public-nav .public-nav-center ul{
 	float: left;
@@ -571,15 +578,64 @@ overflow: hidden;
 }
 
 .luntop .top-live-left .donghua{
+	position: relative;
 	margin-left: 16px;
 	margin-top:6px;
 	float: left;
+	width: 90px;
+	height: 60px;
+	overflow: hidden;
+}
+.luntop .top-live-left .donghua .mask{
+	position: absolute;
+	right: 0;
+	top: 0;
+    z-index: 4;
+	width:90px;
+	height:60px;
+	background: url(../img/radio.png) no-repeat;
+	background-size: 90px 60px;
 }
 .luntop .top-live-left .donghua img{
+	position: absolute;
+	right: 0;
+	top: 0;
 	display: block;
-	width:100%;
-	height:100%;
+	width:90px;
+	height:60px;
+	animation: imgMove 12s infinite;
 }
+@keyframes imgMove {
+  0% {
+    right: 0;
+    top: 0;
+    width: 90px;
+    height: 60px; }
+  20% {
+    right: 0;
+    top: 0;
+    width: 160px;
+    height: 160px; }
+  40% {
+    right: 0;
+    top: -100px;
+    width: 160px;
+    height: 160px; }
+  60% {
+    right: -70px;
+    top: -100px;
+    width: 160px;
+    height: 160px; }
+  80% {
+    right: -70px;
+    top: 0px;
+    width: 160px;
+    height: 160px; }
+  100% {
+    right: 0px;
+    top: 0px;
+    width: 90px;
+    height: 60px; } }
 .luntop .top-live-left .wly{
 	float: right;
 	margin-right: 8px;
